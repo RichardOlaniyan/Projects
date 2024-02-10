@@ -1,0 +1,33 @@
+import string
+import random
+
+print('Welcome to the Password Generator')
+
+user_letter = int(input('How many letters would you like in your password? '))
+user_number = int(input('How many numbers would you like in your password? '))
+user_symbol = int(input('How many symbols would you like in your password? '))
+
+
+def randomize_letters():
+    letters = list(string.ascii_lowercase)
+    letters.append(list(string.ascii_uppercase))
+    return random.choices(letters, k=user_letter)
+
+
+def randomize_numbers():
+    numbers = list(string.digits)
+    return random.choices(numbers, k=user_number)
+
+
+def randomize_symbols():
+    symbols = list(string.punctuation)
+    return random.choices(symbols, k=user_symbol)
+
+
+def randomize_password():
+    password = random.sample(randomize_symbols() + randomize_letters() + randomize_numbers(), k=user_symbol+user_number+user_letter)
+    password_ready = ",".join(str(pwd) for pwd in password)
+    return password_ready
+
+
+print("Your desired password is:", randomize_password())
