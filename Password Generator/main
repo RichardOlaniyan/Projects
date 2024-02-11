@@ -9,8 +9,7 @@ user_symbol = int(input('How many symbols would you like in your password? '))
 
 
 def randomize_letters():
-    letters = list(string.ascii_lowercase)
-    letters.append(list(string.ascii_uppercase))
+    letters = list(string.ascii_lowercase) + list(string.ascii_uppercase)
     return random.choices(letters, k=user_letter)
 
 
@@ -25,9 +24,10 @@ def randomize_symbols():
 
 
 def randomize_password():
-    password = random.sample(randomize_symbols() + randomize_letters() + randomize_numbers(), k=user_symbol+user_number+user_letter)
-    password_ready = ",".join(str(pwd) for pwd in password)
+    password = random.sample(randomize_symbols() + randomize_letters() + randomize_numbers(),
+                             k=user_symbol+user_number+user_letter)
+    password_ready = "".join(map(str, password))
     return password_ready
 
 
-print("Your desired password is:", randomize_password())
+print("Your password is:", randomize_password())
