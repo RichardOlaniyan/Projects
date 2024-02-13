@@ -1,2 +1,2 @@
 # Projects
- Ongoing learning project using Python.
+ Ongoing learning projects using Python.
