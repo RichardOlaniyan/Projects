@@ -1,2 +1,2 @@
 # Projects
- Ongoing creations using different technologies
+ Ongoing learning project using Python.
