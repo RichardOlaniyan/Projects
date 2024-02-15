@@ -20,17 +20,16 @@ def prime_checker(number=user_no):
     return is_prime
 
 
+# Trying to prompt the user to enter another number if the previous number entered is not a prime number
 to_continue = True
 while to_continue:
     command = prime_checker(user_no)
     if command is False:
-        user_command_first = input('Try another number: \n')
-        if user_command_first == "retry":
-            to_continue = True
+        user_command_first = int(input('Enter another number: \n'))
+        prime_checker(user_command_first)
     elif command is True:
         user_command_second = input('Type Yes to continue or about to end \n')
         if user_command_second == "abort":
             to_continue = False
 else:
     print("Thank you using the Prime Checker")
-

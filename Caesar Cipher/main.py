@@ -6,7 +6,7 @@ import string
 # operation = input("Would you like to encode or decode this message? \n")
 
 
-# Long Version
+# Longer Version
 def caesar(original_message, shift_amt, which_operation):
     full_alpha = list(string.ascii_lowercase) + list(string.ascii_lowercase)
     if which_operation == 'encode':
