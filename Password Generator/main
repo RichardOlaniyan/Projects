@@ -13,6 +13,7 @@ def randomize_letters():
     return random.choices(letters, k=user_letter)
 
 
+
 def randomize_numbers():
     numbers = list(string.digits)
     return random.choices(numbers, k=user_number)
