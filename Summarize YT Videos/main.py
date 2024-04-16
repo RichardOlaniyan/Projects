@@ -44,3 +44,4 @@ app = gradio.Interface(
     title="YouTube Video Summarizer GPT"
 )
 app.launch(share=True)
+
